@@ -1,68 +1,51 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
+    font-family: 'Cairo', sans-serif;
+    background-color: #d4f8e8; /* أخضر فاتح */
+    text-align: center;
+    direction: rtl;
 }
 
 .container {
-    background-color: #4CAF50;
-    color: white;
-    padding: 100px 20px;
+    margin-top: 50px;
 }
 
-.start-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    background-color: white;
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+h1 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 30px;
 }
 
-.plans {
-    padding: 50px 20px;
-}
-
-.plan {
-    background-color: white;
+.package {
+    background-color: #fff;
     margin: 20px auto;
     padding: 20px;
-    max-width: 400px;
+    width: 80%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.plan h3 {
-    margin-top: 0;
+.package h2 {
+    color: #007bff; /* أزرق */
+    margin-bottom: 10px;
+}
+
+.package p {
+    color: #555;
+    margin-bottom: 20px;
 }
 
 button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    border: none;
+    background-color: #007bff; /* أزرق */
     color: white;
+    border: none;
+    padding: 12px 24px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-.wallet, .payment, .verify {
-    padding: 50px 20px;
-}
-
-input[type="text"] {
-    padding: 10px;
-    width: 80%;
-    margin-top: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.qr {
-    width: 200px;
-    margin: 20px 0;
+button:hover {
+    background-color: #0056b3;
 }
