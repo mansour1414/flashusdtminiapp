@@ -1,24 +1,68 @@
-
 body {
-    font-family: 'Tajawal', sans-serif;
-    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
     text-align: center;
-    padding: 20px;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
 }
-button {
+
+.container {
     background-color: #4CAF50;
     color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 8px;
-    margin-top: 20px;
-    cursor: pointer;
+    padding: 100px 20px;
 }
-.package {
-    background: white;
+
+.start-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: white;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.plans {
+    padding: 50px 20px;
+}
+
+.plan {
+    background-color: white;
+    margin: 20px auto;
     padding: 20px;
-    margin: 10px;
+    max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.plan h3 {
+    margin-top: 0;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.wallet, .payment, .verify {
+    padding: 50px 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.qr {
+    width: 200px;
+    margin: 20px 0;
 }
