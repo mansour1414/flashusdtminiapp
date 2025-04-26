@@ -1,40 +1,68 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ابدأ الاستثمار</title>
+    <title>الاستثمار</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="welcome">
-        <h1>مرحباً بك!</h1>
-        <button onclick="startInvestment()">ابدأ الاستثمار الآن</button>
+    <div class="container">
+        <h1>مرحباً بك في الاستثمار</h1>
+        <a href="#plans" class="start-btn">ابدأ الاستثمار الآن</a>
     </div>
 
-    <div class="packages" style="display:none;">
-        <div class="package">
-            <h2>باقة 1</h2>
+    <div class="plans" id="plans">
+        <h2>اختر الباقة المناسبة</h2>
+        <div class="plan">
+            <h3>باقة المبتدئ</h3>
+            <p>الحد الأدنى: 50 USDT</p>
             <button onclick="buyNow()">شراء الآن</button>
         </div>
-        <div class="package">
-            <h2>باقة 2</h2>
+        <div class="plan">
+            <h3>باقة المستثمر</h3>
+            <p>الحد الأدنى: 150 USDT</p>
             <button onclick="buyNow()">شراء الآن</button>
         </div>
-        <div class="package">
-            <h2>باقة 3</h2>
+        <div class="plan">
+            <h3>باقة المحترف</h3>
+            <p>الحد الأدنى: 500 USDT</p>
             <button onclick="buyNow()">شراء الآن</button>
         </div>
+    </div>
+
+    <div class="wallet" id="wallet" style="display:none;">
+        <h2>أدخل عنوان محفظتك</h2>
+        <input type="text" id="walletAddress" placeholder="أدخل عنوان المحفظة">
+        <button onclick="paymentDone()">التالي</button>
+    </div>
+
+    <div class="payment" id="payment" style="display:none;">
+        <h2>ارسل المبلغ إلى:</h2>
+        <p id="walletNumber">TBQjBNcD46sCwEQD3WWVJP54ZitPREvsbx</p>
+        <img src="https://i.postimg.cc/KcVJW2TN/Screenshot-20250425-171136-edit-168777106539469.jpg" alt="QR Code" class="qr">
+        <button onclick="verify()">تم الدفع</button>
+    </div>
+
+    <div class="verify" id="verify" style="display:none;">
+        <h2>جاري التحقق من الدفع...</h2>
+        <p>الرجاء الانتظار قليلاً.</p>
     </div>
 
     <script>
-        function startInvestment() {
-            document.querySelector('.welcome').style.display = 'none';
-            document.querySelector('.packages').style.display = 'block';
-        }
         function buyNow() {
-            alert('يرجى إدخال عنوان المحفظة ثم اضغط التالي.');
+            document.getElementById('plans').style.display = 'none';
+            document.getElementById('wallet').style.display = 'block';
+        }
+
+        function paymentDone() {
+            document.getElementById('wallet').style.display = 'none';
+            document.getElementById('payment').style.display = 'block';
+        }
+
+        function verify() {
+            document.getElementById('payment').style.display = 'none';
+            document.getElementById('verify').style.display = 'block';
         }
     </script>
 </body>
