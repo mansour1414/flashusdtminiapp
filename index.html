@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ابدأ الاستثمار</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="welcome">
+        <h1>مرحباً بك!</h1>
+        <button onclick="startInvestment()">ابدأ الاستثمار الآن</button>
+    </div>
+
+    <div class="packages" style="display:none;">
+        <div class="package">
+            <h2>باقة 1</h2>
+            <button onclick="buyNow()">شراء الآن</button>
+        </div>
+        <div class="package">
+            <h2>باقة 2</h2>
+            <button onclick="buyNow()">شراء الآن</button>
+        </div>
+        <div class="package">
+            <h2>باقة 3</h2>
+            <button onclick="buyNow()">شراء الآن</button>
+        </div>
+    </div>
+
+    <script>
+        function startInvestment() {
+            document.querySelector('.welcome').style.display = 'none';
+            document.querySelector('.packages').style.display = 'block';
+        }
+        function buyNow() {
+            alert('يرجى إدخال عنوان المحفظة ثم اضغط التالي.');
+        }
+    </script>
+</body>
+</html>
