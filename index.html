@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>الاستثمار</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>استثمر الآن</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>اختر الباقة المناسبة لك</h1>
+  <div class="container">
+    <h1>اختر الباقة المناسبة لك</h1>
 
-        <div class="package">
-            <h2>الباقة الأولى</h2>
-            <p>من 50 إلى 500 USDT</p>
-            <a href="wallet.html">
-                <button>شراء الآن</button>
-            </a>
-        </div>
-
-        <div class="package">
-            <h2>الباقة الثانية</h2>
-            <p>من 501 إلى 1000 USDT</p>
-            <a href="wallet.html">
-                <button>شراء الآن</button>
-            </a>
-        </div>
-
-        <div class="package">
-            <h2>الباقة الثالثة</h2>
-            <p>من 1001 إلى 5000 USDT</p>
-            <a href="wallet.html">
-                <button>شراء الآن</button>
-            </a>
-        </div>
-
-        <div class="package">
-            <h2>الباقة الرابعة</h2>
-            <p>من 5001 إلى 10000 USDT</p>
-            <a href="wallet.html">
-                <button>شراء الآن</button>
-            </a>
-        </div>
-
-        <div class="package">
-            <h2>الباقة الخامسة</h2>
-            <p>من 10001 إلى 50000 USDT</p>
-            <a href="wallet.html">
-                <button>شراء الآن</button>
-            </a>
-        </div>
+    <div class="cards">
+      <div class="card">
+        <h2>الباقة الأولى</h2>
+        <p>من 50 إلى 500 USDT</p>
+        <button onclick="openPayment()">شراء الآن</button>
+      </div>
+      <div class="card">
+        <h2>الباقة الثانية</h2>
+        <p>من 501 إلى 1000 USDT</p>
+        <button onclick="openPayment()">شراء الآن</button>
+      </div>
+      <div class="card">
+        <h2>الباقة الثالثة</h2>
+        <p>من 1001 إلى 5000 USDT</p>
+        <button onclick="openPayment()">شراء الآن</button>
+      </div>
+      <div class="card">
+        <h2>الباقة الرابعة</h2>
+        <p>من 5001 إلى 10000 USDT</p>
+        <button onclick="openPayment()">شراء الآن</button>
+      </div>
+      <div class="card">
+        <h2>الباقة الخامسة</h2>
+        <p>أكثر من 10000 USDT</p>
+        <button onclick="openPayment()">شراء الآن</button>
+      </div>
     </div>
+
+    <div class="payment" id="paymentSection" style="display:none;">
+      <h2>أرسل المبلغ إلى المحفظة التالية:</h2>
+      <p class="wallet">TBQjBNcD46sCwEQD3WWVJP54ZitPREvsbx</p>
+      <img src="https://i.postimg.cc/Y9QvGS48/Screenshot-20250427-203554.jpg" alt="QR Code" class="qr">
+      <button onclick="donePayment()">تم الدفع</button>
+    </div>
+
+    <div class="confirmation" id="confirmationSection" style="display:none;">
+      <h2>جارٍ التحقق من الدفع...</h2>
+    </div>
+
+  </div>
+
+  <script>
+    function openPayment() {
+      document.querySelector('.cards').style.display = 'none';
+      document.getElementById('paymentSection').style.display = 'block';
+    }
+    function donePayment() {
+      document.getElementById('paymentSection').style.display = 'none';
+      document.getElementById('confirmationSection').style.display = 'block';
+    }
+  </script>
+
 </body>
 </html>
