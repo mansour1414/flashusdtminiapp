@@ -2,103 +2,53 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USDT Flash</title>
-    <style>
-        .screen {
-            display: none;
-        }
-        .screen.active {
-            display: block;
-        }
-        .card {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-        }
-        button {
-            padding: 10px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>الباقات الاستثمارية</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="screen active" id="screen1">
-        <h1>مرحباً بك في USDT Flash</h1>
-        <p>استثمر عملاتك الرقمية واحصل على أرباح خيالية</p>
-        <button onclick="goToScreen(2)">ابدأ الاستثمار الآن</button>
+    <div class="container">
+        <h1>اختر الباقة المناسبة لك</h1>
+
+        <div class="package">
+            <h2>الباقة الأولى</h2>
+            <p>استثمر من 50 إلى 500 USDT</p>
+            <a href="wallet.html">
+                <button>شراء الآن</button>
+            </a>
+        </div>
+
+        <div class="package">
+            <h2>الباقة الثانية</h2>
+            <p>استثمر من 500 إلى 5000 USDT</p>
+            <a href="wallet.html">
+                <button>شراء الآن</button>
+            </a>
+        </div>
+
+        <div class="package">
+            <h2>الباقة الثالثة</h2>
+            <p>استثمر من 1000 إلى 10000 USDT</p>
+            <a href="wallet.html">
+                <button>شراء الآن</button>
+            </a>
+        </div>
+
+        <div class="package">
+            <h2>الباقة الرابعة</h2>
+            <p>استثمر من 5000 إلى 50000 USDT</p>
+            <a href="wallet.html">
+                <button>شراء الآن</button>
+            </a>
+        </div>
+
+        <div class="package">
+            <h2>الباقة الخامسة</h2>
+            <p>استثمر من 10000 إلى 100000 USDT</p>
+            <a href="wallet.html">
+                <button>شراء الآن</button>
+            </a>
+        </div>
+
     </div>
-    <div class="screen" id="screen2">
-        <h1>اختر الباقة المناسبة</h1>
-
-        <div class="card">
-            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png?v=029" width="60">
-            <h2>الباقة 1</h2>
-            <p>USDT 100</p>
-            <p>تحصل على 1000 FLASH</p>
-            <p>مدة الباقة: 110 يوم</p>
-            <button onclick="goToScreen(3)">شراء الآن</button>
-        </div>
-
-        <div class="card">
-            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png?v=029" width="60">
-            <h2>الباقة 2</h2>
-            <p>USDT 200</p>
-            <p>تحصل على 2000 FLASH</p>
-            <p>مدة الباقة: 110 يوم</p>
-            <button onclick="goToScreen(3)">شراء الآن</button>
-        </div>
-
-        <div class="card">
-            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png?v=029" width="60">
-            <h2>الباقة 3</h2>
-            <p>USDT 300</p>
-            <p>تحصل على 3000 FLASH</p>
-            <p>مدة الباقة: 110 يوم</p>
-            <button onclick="goToScreen(3)">شراء الآن</button>
-        </div>
-
-        <div class="card">
-            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png?v=029" width="60">
-            <h2>الباقة 4</h2>
-            <p>USDT 400</p>
-            <p>تحصل على 4000 FLASH</p>
-            <p>مدة الباقة: 110 يوم</p>
-            <button onclick="goToScreen(3)">شراء الآن</button>
-        </div>
-
-        <div class="card">
-            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png?v=029" width="60">
-            <h2>الباقة 5</h2>
-            <p>USDT 500</p>
-            <p>تحصل على 5000 FLASH</p>
-            <p>مدة الباقة: 110 يوم</p>
-            <button onclick="goToScreen(3)">شراء الآن</button>
-        </div>
-    </div>
-    <div class="screen" id="screen3">
-        <h1>تم اختيار الباقة بنجاح!</h1>
-        <p>شكراً لاختيارك خدمتنا. سيتم التواصل معك قريباً.</p>
-        <button onclick="goToScreen(1)">العودة إلى الشاشة الرئيسية</button>
-    </div>
-
-    <script>
-        function goToScreen(screenId) {
-            // إخفاء جميع الشاشات
-            document.querySelectorAll('.screen').forEach(screen => {
-                screen.classList.remove('active');
-            });
-            // إظهار الشاشة المطلوبة
-            document.getElementById('screen' + screenId).classList.add('active');
-        }
-    </script>
 </body>
 </html>
